@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    public float startTime = 3.0f;
     public int score;
     public float lifeTime = 1.0f;
     public int hitBlockScore = 10;
