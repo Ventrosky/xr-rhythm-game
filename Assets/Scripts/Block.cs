@@ -17,16 +17,16 @@ public class Block : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("SwordRed")){
             if(color == BlockColor.Red){
-                // add score
+                GameManager.instance.AddScore();
             } else {
-                // remove life
+                GameManager.instance.HitWrongBlock();
             }
             Hit();
-        } else if (other.CompareTag("SwordRed")){
+        } else if (other.CompareTag("SwordGreen")){
             if(color == BlockColor.Green){
-                // add score
+                GameManager.instance.AddScore();
             } else {
-                // remove life
+                GameManager.instance.HitWrongBlock();
             }
             Hit();
         }

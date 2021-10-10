@@ -424,6 +424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344ad6952f0e3194fae4b1deaaf9ed9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 1181832705}
+  lifetimeBar: {fileID: 885068530}
 --- !u!114 &427094286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +438,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e303266d14aee5141b8dc2e89c984056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  lifeTime: 1
+  hitBlockScore: 10
+  missBlockLife: 0.1
+  wrongBlockLife: 0.08
+  lifeRegenRate: 0.1
 --- !u!4 &427094287
 Transform:
   m_ObjectHideFlags: 0
@@ -953,7 +961,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'SCORE
 
-    986432'
+    0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4f6f16c459e3b34dba8b9946ca55992, type: 2}
   m_sharedMaterial: {fileID: 2186486227068336821, guid: b4f6f16c459e3b34dba8b9946ca55992, type: 2}
