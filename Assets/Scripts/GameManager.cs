@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     public float startTime = 3.0f;
@@ -34,6 +35,17 @@ public class GameManager : MonoBehaviour {
     }
     private void Update() {
         lifeTime = Mathf.MoveTowards(lifeTime, 1.0f, lifeRegenRate * Time.deltaTime);
+
+        if(lifeTime <= 0) 
+            LoseGame();
+        
         GameUI.instance.UpdateLifetimeBar();
+    }
+
+    public void WinGame(){
+        SceneManager.LoadScene(0);
+    }
+    public void LoseGame(){
+        SceneManager.LoadScene(0);
     }
 }
