@@ -16,14 +16,14 @@ public class Block : MonoBehaviour {
     public float brokenBlockDestroyDelay;
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("SwordRed")){
-            if(color == BlockColor.Red){
+            if(color == BlockColor.Red && GameManager.instance.rigthSwordTracker.velocity.magnitude >= GameManager.instance.swordHitVelocityThreshold){
                 GameManager.instance.AddScore();
             } else {
                 GameManager.instance.HitWrongBlock();
             }
             Hit();
         } else if (other.CompareTag("SwordGreen")){
-            if(color == BlockColor.Green){
+            if(color == BlockColor.Green && GameManager.instance.leftSwordTracker.velocity.magnitude >= GameManager.instance.swordHitVelocityThreshold){
                 GameManager.instance.AddScore();
             } else {
                 GameManager.instance.HitWrongBlock();

@@ -10,9 +10,13 @@ public class GameManager : MonoBehaviour {
     public float missBlockLife = 0.1f;
     public float wrongBlockLife = 0.08f;
     public float lifeRegenRate = 0.1f;
+    public float swordHitVelocityThreshold = 0.5f;
 
     // instance
     public static GameManager instance;
+
+    public VelocityTracker leftSwordTracker;
+    public VelocityTracker rigthSwordTracker;
 
     private void Awake() {
         instance = this;
